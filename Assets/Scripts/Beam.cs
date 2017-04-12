@@ -22,6 +22,8 @@ public class Beam : MonoBehaviour {
 
 	void ResetBeam() {
 		gameObject.SetActive(false);
+		rb2d.velocity = Vector2.zero;
+		rb2d.angularVelocity = 0;
 		if(gun != null) {
 			transform.position = gun.transform.parent.gameObject.transform.position;
 		}
